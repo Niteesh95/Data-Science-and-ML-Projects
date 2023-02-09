@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cardiovascular Diesase Predictor</title>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<header class="w3-container">
+            <h2 class='container-heading'><span class="heading_font">Cardiovascular Diesase Predictor</span></h2>
+      </header>
+
+      <div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="post">
+                <p><label for="age", class="label">Age:</label><input class="form-input" type="text" name="age" placeholder="Age(years)" required="required"><br></p>
+                <p><label for="gender" class="label">Gender:</label><input class="form-input" type="text" name="gender" placeholder="gender(1-female, 2-male)" required="required"><br></p>
+                <p><label for="height" class="label">Height:</label><input class="form-input" type="text" name="height" placeholder="height(cms)" required="required"><br></p>
+                <p><label for="weight" class="label">Weight:</label><input class="form-input" type="text" name="weight" placeholder="weight(kgs)" required="required"><br></p>
+                <p><label for="systolic_bp" class="label">Systolic BP:</label><input class="form-input" type="text" name="systolic_bp" placeholder="systolic_bp(90-120)" required="required"><br></p>
+                <p><label for="diastolic_bp" class="label">Diastolic BP:</label><input class="form-input" type="text" name="diastolic_bp" placeholder="diastolic_bp(60-80)" required="required"><br></p>
+                <p><label for="cholesterol" class="label">Cholesterol:</label><input class="form-input" type="text" name="cholesterol" placeholder="cholesterol(1: normal, 2: above normal, 3: well above normal)" required="required"><br></p>
+                <p><label for="glucose" class="label">Glucose:</label><input class="form-input" type="text" name="glucose" placeholder="glucose(1: normal, 2: above normal, 3: well above normal)" required="required"><br></p>
+                <p><label for="smoke" class="label">Smoke:</label><input class="form-input" type="text" name="smoke" placeholder="smoke(1-yes, 0-no)" required="required"><br></p>
+                <p><label for="alcoholic" class="label">Alcoholic:</label><input class="form-input" type="text" name="alcoholic" placeholder="alcoholic(1-yes, 0-no)" required="required"><br></p>
+                <p><label for="active" class="label">Physical Activity:</label><input class="form-input" type="text" name="active" placeholder="active(1-yes, 0-no)" required="required"><br></p>
+
+        		            <button type="submit" class="my-cta-button">Predict</button>
+        	</form>
+        <br>
+        <br>
+          <h2>{{ prediction_text }}</h2>
+        </div>
+
+        <div class="footer">
+        <a target="_blank" href="https://github.com/Niteesh95/cardiovascular-disease-prediction-deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/niteesh-chanabasanavar"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+      <footer class="w3-container">
+           <p>Made by Niteesh.</p>
+      </footer>
+
+    </body>
+</html>

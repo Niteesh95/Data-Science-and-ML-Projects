@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../static/styles.css">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<header class="w3-container">
+            <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
+      </header>
+
+      <div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <p>
+                  <label for="pregnancies", class="label">Pregnancies:</label>
+                  <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0" required="required"><br>
+                </p>
+                <p>
+                  <label for="glucose" class="label">Glucose:</label>
+                  <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80" required="required"><br>
+                </p>
+                <p>
+                  <label for="bloodpressure" class="label">Blood Pressure:</label>
+                  <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80" required="required"><br>
+                </p>
+                <p>
+                  <label for="skinthickness" class="label">Skin Thickness:</label>
+                  <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20" required="required"><br>
+                </p>
+                <p>
+                  <label for="insulin" class="label">Insulin:</label>
+                  <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80" required="required"><br>
+                </p>
+                <p>
+                  <label for="bmi" class="label">Body Mass Index:</label>
+                  <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1" required="required"><br>
+                </p>
+                <p>
+                  <label for="dpf" class="label">Diabetes Pedigree Function:</label>
+                  <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52" required="required"><br>
+                </p>
+                <p>
+                  <label for="age" class="label">Age:</label>
+                  <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34" required="required"><br>
+                </p>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+
+        </div>
+          <br>
+          <br>
+          <div class="results">
+			         {% if prediction==1 %}
+				          <h1>Prediction: <span class='true'>Diabetes Diagnosed</span></h1>
+			         {% elif prediction==0 %}
+				          <h1>Prediction: <span class='false'>You DON'T have Diabetes</span></h1>
+			         {% endif %}
+          </div>
+    	</div>
+
+        <div class="footer">
+          <a target="_blank" href="https://github.com/Niteesh95/Diabetes-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/niteesh-chanabasanavar"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+      <footer class="w3-container">
+           <p>Made by Niteesh.</p>
+      </footer>
+
+    </body>
+</html>
