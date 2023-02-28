@@ -69,8 +69,6 @@ UK_Used_Car_Pricing </br>
 <img src="images/price by mpg 2.jpg" width=500 height=350 />
 - Most of the cars sold in the range £15-£30k have a tax slab of 100-200 units. 
 - Most of the cars priced between £0-£15k have a tax ranging between 0-200.
-<br clear="left"/>
-<br/>
 
 **Analysis - Engine Size**<br/><br/>
 <img src="images/enginesize by mpg 01.jpg" width=500 height=350 />
@@ -78,8 +76,6 @@ UK_Used_Car_Pricing </br>
 <img src="images/price by make.jpg" width=500 height=350 />
 <img src="images/mpg by make.jpg" width=500 height=350 />
 - Audi, BMW and Mercedes cars with engine size between 1.5L to 2L and with similar MPG as other manufacturers cost at least £10000 higher. 
-<br clear="left"/>
-<br/>
 
 ## Modeling and Results
 **Data Cleaning and Feature Engineering**<br/>
